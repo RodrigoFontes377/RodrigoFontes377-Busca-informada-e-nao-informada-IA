@@ -126,5 +126,4 @@ iasi.adicionarVizinho(neamt);
 
 neamt.adicionarVizinho(iasi);
 
-// Execução da busca em largura
 buscaEmLargura(arad, bucharest);
