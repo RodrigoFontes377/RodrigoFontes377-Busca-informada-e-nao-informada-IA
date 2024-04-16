@@ -1,11 +1,11 @@
-class Cidade {
+class City {
   constructor(nome) {
     this.nome = nome;
     this.vizinhos = [];
     this.visitado = false;
   }
 
-  adicionarVizinho(vizinho) {
+  addVizinho(vizinho) {
     this.vizinhos.push(vizinho);
   }
 }
@@ -33,94 +33,94 @@ function buscaEmProfundidade(atual, objetivo, nosVisitados) {
   return false;
 }
 
-// Criando as cidades
-const arad = new Cidade("Arad");
-const zerind = new Cidade("Zerind");
-const oradea = new Cidade("Oradea");
-const sibiu = new Cidade("Sibiu");
-const timisoara = new Cidade("Timisoara");
-const lugoj = new Cidade("Lugoj");
-const mehadia = new Cidade("Mehadia");
-const dobreta = new Cidade("Dobreta");
-const craiova = new Cidade("Craiova");
-const rimnicuVilcea = new Cidade("Rimnicu Vilcea");
-const fagaras = new Cidade("Fagaras");
-const pitesti = new Cidade("Pitesti");
-const bucharest = new Cidade("Bucharest");
-const giurgiu = new Cidade("Giurgiu");
-const urziceni = new Cidade("Urziceni");
-const hirsova = new Cidade("Hirsova");
-const eforie = new Cidade("Eforie");
-const vaslui = new Cidade("Vaslui");
-const iasi = new Cidade("Iasi");
-const neamt = new Cidade("Neamt");
+// Criando as Citys
+const arad = new City("Arad");
+const bucharest = new City("Bucharest");
+const craiova = new City("Craiova");
+const dobreta = new City("Dobreta");
+const eforie = new City("Eforie");
+const fagaras = new City("Fagaras");
+const giurgiu = new City("Giurgiu");
+const hirsova = new City("Hirsova");
+const iasi = new City("Iasi");
+const lugoj = new City("Lugoj");
+const mehadia = new City("Mehadia");
+const neamt = new City("Neamt");
+const oradea = new City("Oradea");
+const pitesti = new City("Pitesti");
+const rimnicuVilcea = new City("Rimnicu Vilcea");
+const sibiu = new City("Sibiu");
+const timisoara = new City("Timisoara");
+const urziceni = new City("Urziceni");
+const vaslui = new City("Vaslui");
+const zerind = new City("Zerind");
 
-// Adicionando as conexões entre as cidades
-arad.adicionarVizinho(sibiu);
-arad.adicionarVizinho(timisoara);
-arad.adicionarVizinho(zerind);
+// Adicionando as conexões entre as Citys
+arad.addVizinho(sibiu);
+arad.addVizinho(timisoara);
+arad.addVizinho(zerind);
 
-zerind.adicionarVizinho(arad);
-zerind.adicionarVizinho(oradea);
+zerind.addVizinho(arad);
+zerind.addVizinho(oradea);
 
-oradea.adicionarVizinho(zerind);
-oradea.adicionarVizinho(sibiu);
+oradea.addVizinho(zerind);
+oradea.addVizinho(sibiu);
 
-sibiu.adicionarVizinho(arad);
-sibiu.adicionarVizinho(fagaras);
-sibiu.adicionarVizinho(oradea);
-sibiu.adicionarVizinho(rimnicuVilcea);
+sibiu.addVizinho(arad);
+sibiu.addVizinho(fagaras);
+sibiu.addVizinho(oradea);
+sibiu.addVizinho(rimnicuVilcea);
 
-timisoara.adicionarVizinho(arad);
-timisoara.adicionarVizinho(lugoj);
+timisoara.addVizinho(arad);
+timisoara.addVizinho(lugoj);
 
-lugoj.adicionarVizinho(timisoara);
-lugoj.adicionarVizinho(mehadia);
+lugoj.addVizinho(timisoara);
+lugoj.addVizinho(mehadia);
 
-mehadia.adicionarVizinho(lugoj);
-mehadia.adicionarVizinho(dobreta);
+mehadia.addVizinho(lugoj);
+mehadia.addVizinho(dobreta);
 
-dobreta.adicionarVizinho(mehadia);
-dobreta.adicionarVizinho(craiova);
+dobreta.addVizinho(mehadia);
+dobreta.addVizinho(craiova);
 
-craiova.adicionarVizinho(dobreta);
-craiova.adicionarVizinho(pitesti);
-craiova.adicionarVizinho(rimnicuVilcea);
+craiova.addVizinho(dobreta);
+craiova.addVizinho(pitesti);
+craiova.addVizinho(rimnicuVilcea);
 
-rimnicuVilcea.adicionarVizinho(sibiu);
-rimnicuVilcea.adicionarVizinho(pitesti);
-rimnicuVilcea.adicionarVizinho(craiova);
+rimnicuVilcea.addVizinho(sibiu);
+rimnicuVilcea.addVizinho(pitesti);
+rimnicuVilcea.addVizinho(craiova);
 
-fagaras.adicionarVizinho(sibiu);
-fagaras.adicionarVizinho(bucharest);
+fagaras.addVizinho(sibiu);
+fagaras.addVizinho(bucharest);
 
-pitesti.adicionarVizinho(rimnicuVilcea);
-pitesti.adicionarVizinho(craiova);
-pitesti.adicionarVizinho(bucharest);
+pitesti.addVizinho(rimnicuVilcea);
+pitesti.addVizinho(craiova);
+pitesti.addVizinho(bucharest);
 
-bucharest.adicionarVizinho(fagaras);
-bucharest.adicionarVizinho(pitesti);
-bucharest.adicionarVizinho(giurgiu);
-bucharest.adicionarVizinho(urziceni);
+bucharest.addVizinho(fagaras);
+bucharest.addVizinho(pitesti);
+bucharest.addVizinho(giurgiu);
+bucharest.addVizinho(urziceni);
 
-giurgiu.adicionarVizinho(bucharest);
+giurgiu.addVizinho(bucharest);
 
-urziceni.adicionarVizinho(bucharest);
-urziceni.adicionarVizinho(hirsova);
-urziceni.adicionarVizinho(vaslui);
+urziceni.addVizinho(bucharest);
+urziceni.addVizinho(hirsova);
+urziceni.addVizinho(vaslui);
 
-hirsova.adicionarVizinho(urziceni);
-hirsova.adicionarVizinho(eforie);
+hirsova.addVizinho(urziceni);
+hirsova.addVizinho(eforie);
 
-eforie.adicionarVizinho(hirsova);
+eforie.addVizinho(hirsova);
 
-vaslui.adicionarVizinho(urziceni);
-vaslui.adicionarVizinho(iasi);
+vaslui.addVizinho(urziceni);
+vaslui.addVizinho(iasi);
 
-iasi.adicionarVizinho(vaslui);
-iasi.adicionarVizinho(neamt);
+iasi.addVizinho(vaslui);
+iasi.addVizinho(neamt);
 
-neamt.adicionarVizinho(iasi);
+neamt.addVizinho(iasi);
 
 // Execução da busca em profundidade com contagem de nós
 const objetivo = bucharest;
