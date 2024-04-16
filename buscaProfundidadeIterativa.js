@@ -4,7 +4,7 @@ class City {
     this.vizinhos = [];
   }
 
-  adicionarVizinho(vizinho) {
+  addVizinho(vizinho) {
     this.vizinhos.push(vizinho);
   }
 }
@@ -99,71 +99,71 @@ const vaslui = new City("Vaslui");
 const zerind = new City("Zerind");
 
 // Adicionando os vizinhos
-arad.adicionarVizinho(sibiu);
-arad.adicionarVizinho(timisoara);
-arad.adicionarVizinho(zerind);
+arad.addVizinho(sibiu);
+arad.addVizinho(timisoara);
+arad.addVizinho(zerind);
 
-zerind.adicionarVizinho(arad);
-zerind.adicionarVizinho(oradea);
+zerind.addVizinho(arad);
+zerind.addVizinho(oradea);
 
-oradea.adicionarVizinho(zerind);
-oradea.adicionarVizinho(sibiu);
+oradea.addVizinho(zerind);
+oradea.addVizinho(sibiu);
 
-sibiu.adicionarVizinho(arad);
-sibiu.adicionarVizinho(fagaras);
-sibiu.adicionarVizinho(oradea);
-sibiu.adicionarVizinho(rimnicuVilcea);
+sibiu.addVizinho(arad);
+sibiu.addVizinho(fagaras);
+sibiu.addVizinho(oradea);
+sibiu.addVizinho(rimnicuVilcea);
 
-timisoara.adicionarVizinho(arad);
-timisoara.adicionarVizinho(lugoj);
+timisoara.addVizinho(arad);
+timisoara.addVizinho(lugoj);
 
-lugoj.adicionarVizinho(timisoara);
-lugoj.adicionarVizinho(mehadia);
+lugoj.addVizinho(timisoara);
+lugoj.addVizinho(mehadia);
 
-mehadia.adicionarVizinho(lugoj);
-mehadia.adicionarVizinho(dobreta);
+mehadia.addVizinho(lugoj);
+mehadia.addVizinho(dobreta);
 
-dobreta.adicionarVizinho(mehadia);
-dobreta.adicionarVizinho(craiova);
+dobreta.addVizinho(mehadia);
+dobreta.addVizinho(craiova);
 
-craiova.adicionarVizinho(dobreta);
-craiova.adicionarVizinho(pitesti);
-craiova.adicionarVizinho(rimnicuVilcea);
+craiova.addVizinho(dobreta);
+craiova.addVizinho(pitesti);
+craiova.addVizinho(rimnicuVilcea);
 
-rimnicuVilcea.adicionarVizinho(sibiu);
-rimnicuVilcea.adicionarVizinho(pitesti);
-rimnicuVilcea.adicionarVizinho(craiova);
+rimnicuVilcea.addVizinho(sibiu);
+rimnicuVilcea.addVizinho(pitesti);
+rimnicuVilcea.addVizinho(craiova);
 
-fagaras.adicionarVizinho(sibiu);
-fagaras.adicionarVizinho(bucharest);
+fagaras.addVizinho(sibiu);
+fagaras.addVizinho(bucharest);
 
-pitesti.adicionarVizinho(rimnicuVilcea);
-pitesti.adicionarVizinho(craiova);
-pitesti.adicionarVizinho(bucharest);
+pitesti.addVizinho(rimnicuVilcea);
+pitesti.addVizinho(craiova);
+pitesti.addVizinho(bucharest);
 
-bucharest.adicionarVizinho(fagaras);
-bucharest.adicionarVizinho(pitesti);
-bucharest.adicionarVizinho(giurgiu);
-bucharest.adicionarVizinho(urziceni);
+bucharest.addVizinho(fagaras);
+bucharest.addVizinho(pitesti);
+bucharest.addVizinho(giurgiu);
+bucharest.addVizinho(urziceni);
 
-giurgiu.adicionarVizinho(bucharest);
+giurgiu.addVizinho(bucharest);
 
-urziceni.adicionarVizinho(bucharest);
-urziceni.adicionarVizinho(hirsova);
-urziceni.adicionarVizinho(vaslui);
+urziceni.addVizinho(bucharest);
+urziceni.addVizinho(hirsova);
+urziceni.addVizinho(vaslui);
 
-hirsova.adicionarVizinho(urziceni);
-hirsova.adicionarVizinho(eforie);
+hirsova.addVizinho(urziceni);
+hirsova.addVizinho(eforie);
 
-eforie.adicionarVizinho(hirsova);
+eforie.addVizinho(hirsova);
 
-vaslui.adicionarVizinho(urziceni);
-vaslui.adicionarVizinho(iasi);
+vaslui.addVizinho(urziceni);
+vaslui.addVizinho(iasi);
 
-iasi.adicionarVizinho(vaslui);
-iasi.adicionarVizinho(neamt);
+iasi.addVizinho(vaslui);
+iasi.addVizinho(neamt);
 
-neamt.adicionarVizinho(iasi);
+neamt.addVizinho(iasi);
 
 // Execução da busca em profundidade iterativa
 const caminhoEncontrado = buscaProfundidadeIterativa(arad, bucharest);
